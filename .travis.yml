@@ -1,6 +1,6 @@
 language: cpp
 before_install:
-    - sudo apt-add-repository ppa:canonical-qt5-edgers/ubuntu1204-qt5
-    - sudo apt-get update
+    - sudo apt-add-repository --yes ppa:canonical-qt5-edgers/ubuntu1204-qt5
+    - sudo apt-get update -qq
 script: 
     - make

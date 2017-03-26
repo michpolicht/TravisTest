@@ -12,5 +12,6 @@ install:
 
 script:
   - source /opt/qt58/bin/qt58-env.sh
-  - /opt/qt58/bin/qmake
+  - mkdir build && cd build
+  - /opt/qt58/bin/qmake ../TravisTest.pro
   - make

@@ -7,7 +7,7 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install qt58[QTPACKAGE]
+  - sudo apt-get -y install qt58 qt58serialbus 
 
 script:
   - source /opt/qt58/bin/qt58-env.sh

@@ -9,7 +9,7 @@ before_install:
 install:
     #  - sudo apt-get -y install qt58[QTPACKAGE]
     #  - sudo apt-get -y install qt58serialbus
-  - sudo apt-get -y install libmodbus
+  - sudo apt-get -y install libmodbus-dev
 
 services:
   - postgresql

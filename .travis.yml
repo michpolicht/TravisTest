@@ -3,25 +3,20 @@ sudo: required
 dist: trusty
 
 before_install:
-  - sudo add-apt-repository --yes ppa:beineri/opt-qt58-trusty
-  - sudo apt-get update -qq
+    #  - sudo add-apt-repository --yes ppa:beineri/opt-qt58-trusty
+    #  - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install qt58[QTPACKAGE]
-  - sudo apt-get -y install qt58serialbus
+    #  - sudo apt-get -y install qt58[QTPACKAGE]
+    #  - sudo apt-get -y install qt58serialbus
     #  - sudo apt-get -y install libmodbus-dev
-  - sudo git clone git://github.com/stephane/libmodbus.git
-  - cd libmodbus
-  - sudo git checkout f9358460ee1f62bcac716ad0444b3bbe7628b204
-  - sudo ./autogen.sh
-  - sudo ./configure && sudo make install
-  - cd ..
 
 services:
   - postgresql
 
 script:
-  - source /opt/qt58/bin/qt58-env.sh
-  - mkdir build && cd build
-  - /opt/qt58/bin/qmake ../TravisTest.pro
-  - make
+    #  - source /opt/qt58/bin/qt58-env.sh
+    #  - mkdir build && cd build
+    #  - /opt/qt58/bin/qmake ../TravisTest.pro
+    #  - make
+  - g++ test.cpp

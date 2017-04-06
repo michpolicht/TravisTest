@@ -14,6 +14,10 @@ install:
 services:
   - postgresql
 
+env:
+  - TEST=t1
+  - TEST=t2
+
 script:
     #  - source /opt/qt58/bin/qt58-env.sh
     #  - mkdir build && cd build

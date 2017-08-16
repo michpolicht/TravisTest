@@ -3,12 +3,12 @@ sudo: required
 dist: trusty
 
 before_install:
-    #  - sudo add-apt-repository --yes ppa:beineri/opt-qt59-trusty
-    #  - sudo apt-get update -qq
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt59-trusty
+  - sudo apt-get update -qq
 
 install:
-    #  - sudo apt-get -y install qt59[QTPACKAGE]
-    #  - sudo apt-get -y install libmodbus-dev
+  - sudo apt-get -y install qt59[QTPACKAGE]
+  - sudo apt-get -y install libmodbus-dev
 
 services:
   - postgresql
@@ -18,8 +18,8 @@ env:
   - TEST=t2
 
 script:
-    #  - source /opt/qt59/bin/qt59-env.sh
-    #  - mkdir build && cd build
-    #  - /opt/qt59/bin/qmake ../TravisTest.pro
-    #  - make
-  - g++ test.cpp
+  - source /opt/qt59/bin/qt59-env.sh
+  - mkdir build && cd build
+  - /opt/qt59/bin/qmake ../TravisTest.pro
+  - make
+    #  - g++ test.cpp

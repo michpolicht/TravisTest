@@ -30,3 +30,13 @@
 
 Makefile
 Makefile.*
+
+# Vim swap files. 
+*.swp
+
+# Qmake artifacts.
+.qmake.stash
+
+# Qt creator artifacts.
+*.pro.user
+*.qbs.user

@@ -13,6 +13,9 @@ install:
 services:
   - postgresql
 
+compiler:
+  - clang
+
 env:
   - TEST=t1
   - TEST=t2

@@ -8,6 +8,8 @@ before_install:
 
 install:
   - sudo apt-get -y install qt59[QTPACKAGE]
+  - sudo apt-get -y install qt59serialbus
+  - sudo apt-get -y install qt59creator
   - sudo apt-get -y install libmodbus-dev
 
 services:

@@ -1,6 +1,10 @@
 language: cpp
 sudo: required
 dist: trusty
+os:
+  - linux
+  - osx
+  - windows
 
 before_install:
   - sudo add-apt-repository --yes ppa:beineri/opt-qt594-trusty

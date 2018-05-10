@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-<p class="doxygen_github_hack">
+<p class="doxygen_github_hack" style="font-size: 0px">
 
 [//]: # (\htmlonly)
 <a href="https://travis-ci.org/michpolicht/CuteHMI" style="visibility: visible"><img src="https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master" /></a>

@@ -1,12 +1,12 @@
 ## Welcome to GitHub Pages
 
-<span class="doxygen_github_hack">
+<p class="doxygen_github_hack">
 
 [//]: # (\htmlonly)
 <a href="https://travis-ci.org/michpolicht/CuteHMI" style="visibility: visible"><img src="https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master" /></a>
 
 [//]: # (\endhtmlonly)
-</span>
+</p>
 
 You can use the [editor on GitHub](https://github.com/michpolicht/TravisTest/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 

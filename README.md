@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-<div class="doxygen_github_hack">
+<p class="doxygen_github_hack">
 
 [//]: # (\htmlonly)
 
@@ -8,7 +8,7 @@
 
 [//]: # (\endhtmlonly)
 
-</div>
+</p>
 
 You can use the [editor on GitHub](https://github.com/michpolicht/TravisTest/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 

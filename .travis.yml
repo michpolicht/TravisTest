@@ -7,8 +7,8 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install qt58[QTPACKAGE]
-  - sudo apt-get -y install qt58serialbus
+#  - sudo apt-get -y install qt58[QTPACKAGE]
+#  - sudo apt-get -y install qt58serialbus
     #  - sudo apt-get -y install libmodbus-dev
   - sudo git clone git://github.com/stephane/libmodbus.git
   - cd libmodbus
@@ -21,7 +21,7 @@ services:
   - postgresql
 
 script:
-  - source /opt/qt58/bin/qt58-env.sh
-  - mkdir build && cd build
-  - /opt/qt58/bin/qmake ../TravisTest.pro
-  - make
+#  - source /opt/qt58/bin/qt58-env.sh
+#  - mkdir build && cd build
+#  - /opt/qt58/bin/qmake ../TravisTest.pro
+#  - make

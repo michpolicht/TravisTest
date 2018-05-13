@@ -1,3 +1,2 @@
 theme: jekyll-theme-slate
-exclude: subdir
-keep_files: subdir
+include: subdir/_test.html

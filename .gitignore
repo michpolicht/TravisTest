@@ -27,3 +27,8 @@
 *.exe
 *.out
 *.app
+*.user
+
+.qmake.stash
+Makefile.*
+build/*

@@ -3,6 +3,7 @@
 <div class="doxygen_github_hack">
 
 [//]: # (\htmlonly)
+
 [![Build Status](https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master)](https://travis-ci.org/michpolicht/CuteHMI)
 
 [//]: # (\endhtmlonly)
@@ -13,7 +14,7 @@ You can use the [editor on GitHub](https://github.com/michpolicht/TravisTest/edi
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 [//]: # (\htmlonly)
-<div class="testclass">testclass</div>
+<div class="testclass">_testclass_</div>
 
 ### Markdown
 

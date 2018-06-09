@@ -1,6 +1,6 @@
 ## Welcome to GitHub Pages
 
-<div class="doxygen_github_hack">
+<span class="doxygen_github_hack" style="font-size: 0px">
 
 [//]: # (\htmlonly)
 

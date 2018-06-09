@@ -49,4 +49,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 ### Colophon
 
-[GitHub Pages](https://michpolicht.github.io/TravisTest/)
+[Test GitHub Pages](https://michpolicht.github.io/TravisTest/)

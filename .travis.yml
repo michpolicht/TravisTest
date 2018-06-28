@@ -1,12 +1,13 @@
 language: cpp
 sudo: required
-dist: trusty
+dist: xenial
 
 before_install:
-  - sudo add-apt-repository --yes ppa:beineri/opt-qt58-trusty
+  - sudo add-apt-repository --yes ppa:beineri/opt-qt596-xenial
   - sudo apt-get update -qq
 
 install:
+    sudo apt-get -y install qt59-meta-minimal
 #  - sudo apt-get -y install qt58[QTPACKAGE]
 #  - sudo apt-get -y install qt58serialbus
     #  - sudo apt-get -y install libmodbus-dev

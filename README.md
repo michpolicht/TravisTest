@@ -35,6 +35,8 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
+*Italic* __Bold__ text.
+
 [Link](url) and ![Image](src)
 ```
 

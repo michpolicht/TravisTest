@@ -3,7 +3,8 @@
 <div class="doxygen_github_hack" style="font-size: 0px">
 
 [//]: # (\htmlonly)
-<a href="https://travis-ci.org/michpolicht/CuteHMI" style="visibility: visible"><img src="https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master" /></a>
+
+[![Build Status](https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master)](https://travis-ci.org/michpolicht/CuteHMI)
 
 [//]: # (\endhtmlonly)
 </div>
@@ -13,7 +14,7 @@ You can use the [editor on GitHub](https://github.com/michpolicht/TravisTest/edi
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 [//]: # (\htmlonly)
-<div class="testclass">testclass</div>
+<div class="testclass">_testclass_</div>
 
 ### Markdown
 
@@ -48,3 +49,5 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
 
 ### Colophon
+
+[Test GitHub Pages](https://michpolicht.github.io/TravisTest/)

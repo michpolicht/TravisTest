@@ -35,7 +35,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-*Italic* __Bold__ text.
+*Italic* __Bold__ text. Trigger Tavis build.
 
 [Link](url) and ![Image](src)
 ```

@@ -7,10 +7,10 @@ before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install qt59-meta-minimal
+    #  - sudo apt-get -y install qt59-meta-minimal
 #  - sudo apt-get -y install qt58[QTPACKAGE]
 #  - sudo apt-get -y install qt58serialbus
-  - sudo apt-get -y install libmodbus-dev
+#  - sudo apt-get -y install libmodbus-dev
   - sudo apt-get -y install libpq-dev
   - sudo git clone git://github.com/stephane/libmodbus.git
   - cd libmodbus

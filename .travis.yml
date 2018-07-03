@@ -24,6 +24,10 @@ services:
 
 script:
    - ls
+   - whereis libz
+   - whereis libgcrypt
+   - whereis libgpg-error
+   - whereis libssh
 #  - source /opt/qt58/bin/qt58-env.sh
 #  - mkdir build && cd build
 #  - /opt/qt58/bin/qmake ../TravisTest.pro

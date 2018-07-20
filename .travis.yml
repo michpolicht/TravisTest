@@ -2,7 +2,12 @@ language: cpp
 sudo: required
 dist: xenial
 
+env:
+  global:
+   - secure: "ERd88/gJMygmrWxogXv5NLhGW3KnomRIVLLJKaimvtK4rkdaHZCb9IFaRNo6LlMFcY714CxwLBEcO3J22QKz/ch8AgU5X8Z6mvQQfkntC9mrhStyDOEWQ+Yj7ZEfW0Yg6mXF4y07r6F49AFyCYEnUjyhPwFbMIMEcbprKDWwicyuG4hMGg/qoesP4+mvlgKAtEbAWobe7TE1nMNMv9ysFTI/6Nb03+djl5tcEjTjmc/Ns4wIY27iKHhqdZSI3RgQVjYosJ4MTPH0niUjL0of8HrHOOv+WpiTjZryGZl7Oc/BCkm2mVobjQa2w5vt9EiDT3f/M5ICaJ+s+y3JHt8XyGqi/XoIvhHJX+t07D6/wM/TeLj+cQ+6asPwKXtUSIs8bhl36TqQPS2FNJcfKXkgyB86r7ppLu3G4IJ/PlqJzDjq5MW2oBPHEfhmsJPVXyr/43EPeS69KcjPMh0sR3Y6PmoaYqciValjJvA1QLfyNAxnjeuPxAayDD3Ouh/DjA5Rhe1Y+nQB4fpd5JuottTnD9k/MFcwGDvluGFfmqJ5vaz5ncOLP9OlHiiqNBwCYOExYpTVcUrthjUKTAUrqzwSWfpOUQCz2rzOzLpwK5/oQ/f9yf1yRY2B0q/N256RcMCV0S8u6sZvLq+eX4nick8Kiiyln+zWj7lnnoT09aRmnZw="
+
 before_install:
+  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
   - sudo add-apt-repository --yes ppa:beineri/opt-qt596-xenial
   - sudo apt-get update -qq
 
@@ -31,5 +36,14 @@ script:
    - whereis libssh
 #  - source /opt/qt58/bin/qt58-env.sh
 #  - mkdir build && cd build
-#  - /opt/qt58/bin/qmake ../TravisTest.pro
-#  - make
+   - /opt/qt58/bin/qmake ../TravisTest.pro
+   - make
+addons:
+  coverity_scan:
+    project:
+      name: "michpolicht/TravisTest"
+      description: "Travis Test"
+    notification_email: michpolicht@gmail.com
+    build_command_prepend: "/opt/qt58/bin/qmake ../TravisTest.pro"
+    build_command: "make"
+    branch_pattern: coverity_scan

@@ -36,14 +36,14 @@ script:
    - whereis libssh
 #  - source /opt/qt58/bin/qt58-env.sh
 #  - mkdir build && cd build
-   - /opt/qt58/bin/qmake ../TravisTest.pro
-   - make
+#   - /opt/qt58/bin/qmake ../TravisTest.pro
+#   - make
 addons:
   coverity_scan:
     project:
       name: "michpolicht/TravisTest"
       description: "Travis Test"
     notification_email: michpolicht@gmail.com
-    build_command_prepend: "/opt/qt58/bin/qmake ../TravisTest.pro"
-    build_command: "make"
+    build_command_prepend: "ls"
+    build_command: "ls"
     branch_pattern: coverity_scan

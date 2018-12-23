@@ -8,5 +8,5 @@ build_script:
 - cmd: qmake --version
 - cmd: dir %QTDIR%
 - cmd: dir %QTDIR%\..\..
-- cmd: dir %QTDIR%\..\..\Tools
+- cmd: dir %QTDIR%\..\..\Tool\QtCreator
 - cmd: qbs --version

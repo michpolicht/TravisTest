@@ -2,11 +2,11 @@ image:
 - Visual Studio 2017
 install:
 - set QTDIR=C:\Qt\5.11.2\msvc2017_64
-- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;%QTDIR%\..\..\Tools\QtCreator\bin\
 build_script:
 - cmd: ECHO build script
 - cmd: qmake --version
 - cmd: dir %QTDIR%
 - cmd: dir %QTDIR%\..\..
-- cmd: %QTDIR%\..\..\Tools\QtCreator\bin\qbs --version
+- cmd: qbs --version
 - cmd: qbs --version

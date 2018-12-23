@@ -7,5 +7,5 @@ build_script:
 - cmd: ECHO build script
 - cmd: qmake --version
 - cmd: dir %QTDIR%
-- cmd: dir %QTDIR%\bin
+- cmd: dir %QTDIR%\..
 - cmd: qbs --version

@@ -6,3 +6,4 @@ install:
 build_script:
 - cmd: ECHO build script
 - cmd: qmake --version
+- cmd: qbs --version

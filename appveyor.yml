@@ -1,5 +1,5 @@
-matrix:
-  environment:
+environment:
+  matrix:
     - QBS_ENV: "debug"
     - QBS_ENV: "release"
 image:

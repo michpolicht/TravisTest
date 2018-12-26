@@ -10,7 +10,7 @@ environment:
 image:
 - Visual Studio 2017
 
-init:
+install:
 - set PATH=%QT_PATH%\bin;%PATH%
 - qtenv2.bat
 

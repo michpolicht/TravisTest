@@ -16,12 +16,12 @@ for:
     only:
       - configuration: Debug
      environment:
-      - QBS_ENV: "debug"
+       QBS_ENV: "debug"
 for:
 -
   matrix:
     only:
-      - configuration: Release
+     configuration: Release
      environment:
       - QBS_ENV: "release"
       

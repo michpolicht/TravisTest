@@ -25,9 +25,12 @@ for:
     QBS_ENV: "release"
   build_script:
     - cmd: echo release build
+    - cmd: qbs config --list profiles
       
 build_script:
 - cmd: ECHO %QBS_ENV%
 - cmd: qmake --version
 - cmd: qbs --version
 - cmd: qbs --version
+- cmd: qbs setup-toolchains --detect
+- cmd: qbs config --list profiles

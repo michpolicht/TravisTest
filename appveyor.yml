@@ -42,3 +42,5 @@ build_script:
 - cmd: qbs setup-toolchains --detect
 - cmd: qbs setup-qt --detect
 - cmd: qbs config --list profiles
+- cmd: dir
+- cmd: qbs build

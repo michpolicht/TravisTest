@@ -1,7 +1,7 @@
 matrix:
   environment:
-    QBS_ENV: "debug"
-    QBS_ENV: "release"
+    - QBS_ENV: "debug"
+    - QBS_ENV: "release"
 image:
 - Visual Studio 2017
 install:

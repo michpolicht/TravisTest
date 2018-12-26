@@ -23,6 +23,8 @@ for:
       - configuration: Release
   environment:
     QBS_ENV: "release"
+  build_script:
+    - cmd: echo release build
       
 build_script:
 - cmd: ECHO %QBS_ENV%

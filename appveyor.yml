@@ -42,4 +42,4 @@ build_script:
 - cmd: qbs setup-qt --detect
 - cmd: cd C:\projects\travistest
 - cmd: dir
-- cmd: qbs build
+- cmd: qbs build profile:qt-5-11-2

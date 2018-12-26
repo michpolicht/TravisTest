@@ -17,7 +17,6 @@ for:
      configuration: Debug
      environment:
        QBS_ENV: "debug"
-for:
 -
   matrix:
     only:

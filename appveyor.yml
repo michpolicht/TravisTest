@@ -1,3 +1,6 @@
+configuration:
+  - Debug
+  - Release
 environment:
   matrix:
     - QBS_ENV: "debug"

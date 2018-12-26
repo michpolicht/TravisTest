@@ -1,15 +1,21 @@
 configuration:
   - Debug
   - Release
+
 environment:
   matrix:
-    - TEST_ENV: "val1"
-    - TEST_ENV: "val2"
+    - QT_PATH: C:\Qt\5.11.2\mingw53_32
+    - QT_PATH: C:\Qt\5.11.2\msvc2017_64
+
 image:
 - Visual Studio 2017
+
+init:
+- cmd: %QT_VERSION%\bin\qtenv2.bat
+
 install:
-- set QTDIR=C:\Qt\5.11.2\msvc2017_64
-- set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\QtCreator\bin\
+# - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\QtCreator\bin\
+
 for:
 -
   matrix:
@@ -25,6 +31,7 @@ for:
     QBS_ENV: "release"
   build_script:
     - cmd: echo release build
+    - cmd: qbs setup-toolchains --detect
     - cmd: qbs config --list profiles
       
 build_script:

@@ -10,6 +10,10 @@ environment:
 image:
 - Visual Studio 2017
 
+init:
+- set PATH=%QT_PATH%\bin
+- qtenv2.bat
+
 install:
 # - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\QtCreator\bin\
 
@@ -32,7 +36,6 @@ for:
     - cmd: qbs config --list profiles
       
 build_script:
-- cmd: %QT_PATH%\bin\qtenv2.bat
 - cmd: ECHO %QBS_ENV%
 - cmd: qmake --version
 - cmd: qbs --version

@@ -1,3 +1,6 @@
+environment:
+- QBS_ENV: "debug"
+- QBS_ENV: "release"
 image:
 - Visual Studio 2017
 install:
@@ -6,7 +9,5 @@ install:
 build_script:
 - cmd: ECHO build script
 - cmd: qmake --version
-- cmd: dir %QTDIR%
-- cmd: dir %QTDIR%\..\..
 - cmd: qbs --version
 - cmd: qbs --version

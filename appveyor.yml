@@ -1,5 +1,7 @@
-environment:
+matrix:
+- environment:
   QBS_ENV: "debug"
+- environment:
   QBS_ENV: "release"
 image:
 - Visual Studio 2017

@@ -11,7 +11,7 @@ image:
 - Visual Studio 2017
 
 install:
-- cmd: %QT_PATH%\bin\qtenv2.bat
+# - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\QtCreator\bin\
 
 for:
 -

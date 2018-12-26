@@ -15,14 +15,14 @@ for:
   matrix:
     only:
       - configuration: Debug
-    environment:
-      QBS_ENV: "debug"
+  environment:
+    QBS_ENV: "debug"
 -
   matrix:
     only:
       - configuration: Release
-    environment:
-      QBS_ENV: "release"
+  environment:
+    QBS_ENV: "release"
       
 build_script:
 - cmd: ECHO build script

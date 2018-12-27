@@ -40,4 +40,4 @@ for:
     - cd C:\projects\travistest
       
 build_script:
-- cmd: qbs build profile:qt-5-11-2 config:$(PROJECT_BUILD_MODE)
+- qbs build profile:qt-5-11-2 config:$(PROJECT_BUILD_MODE)

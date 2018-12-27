@@ -4,7 +4,8 @@
 
 [//]: # (\htmlonly)
 
-[![Build Status](https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master)](https://travis-ci.org/michpolicht/CuteHMI)
+[![Travis build status](https://travis-ci.org/michpolicht/CuteHMI.svg?branch=master)](https://travis-ci.org/michpolicht/CuteHMI)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/hd3x68blpy7knd6k?svg=true)](https://ci.appveyor.com/project/michpolicht/travistest)
 
 [//]: # (\endhtmlonly)
 </div>

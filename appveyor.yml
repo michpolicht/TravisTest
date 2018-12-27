@@ -3,6 +3,7 @@ configuration:
   - msvc2017_64
 
 environment:
+  PROJECT_DIR: C:\projects\travistest
   matrix:
     - PROJECT_BUILD_MODE: debug
     - PROJECT_BUILD_MODE: release
@@ -25,7 +26,7 @@ for:
     - qtenv2.bat
     - qbs setup-toolchains --detect
     - qbs setup-qt --detect
-    - cd C:\projects\travistest
+    - cd %PROJECT_DIR%
 -
   matrix:
     only:
@@ -37,7 +38,7 @@ for:
     - qtenv2.bat
     - qbs setup-toolchains --detect
     - qbs setup-qt --detect
-    - cd C:\projects\travistest
+    - cd %PROJECT_DIR%
       
 build_script:
-- qbs build profile:qt-5-11-2 config:$(PROJECT_BUILD_MODE)
+- qbs build profile:qt-5-11-2 config:$PROJECT_BUILD_MODE

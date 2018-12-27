@@ -5,8 +5,8 @@ configuration:
 environment:
   PROJECT_DIR: C:\projects\travistest
   matrix:
-    - PROJECT_BUILD_MODE: debug
-    - PROJECT_BUILD_MODE: release
+    - QBS_CONFIG: debug
+    - QBS_CONFIG: release
 
 image:
 - Visual Studio 2017
@@ -27,6 +27,8 @@ for:
     - qbs setup-toolchains --detect
     - qbs setup-qt --detect
     - cd %PROJECT_DIR%
+  build_script:
+    - qbs build -f test.qbs -d build --command-echo-mode command-line profile:qt-5-11-2 config:%QBS_CONFIG%
 -
   matrix:
     only:
@@ -39,6 +41,6 @@ for:
     - qbs setup-toolchains --detect
     - qbs setup-qt --detect
     - cd %PROJECT_DIR%
+  build_script:
+    - qbs build -f test.qbs -d build --command-echo-mode command-line profile:qt-5-11-2 config:%QBS_CONFIG%
       
-build_script:
-- qbs build profile:qt-5-11-2 config:$PROJECT_BUILD_MODE

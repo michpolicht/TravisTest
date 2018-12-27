@@ -1,45 +1,43 @@
 configuration:
-  - Debug
-  - Release
+  - mingw53_32
+  - msvc2017_64
 
 environment:
   matrix:
-    - QT_PATH: C:\Qt\5.11.2\mingw53_32
-    - QT_PATH: C:\Qt\5.11.2\msvc2017_64
+    - PROJECT_BUILD_MODE: debug
+    - PROJECT_BUILD_MODE: release
 
 image:
 - Visual Studio 2017
 
 install:
 # - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin;C:\Qt\Tools\QtCreator\bin\
-- set PATH=%QT_PATH%\bin;C:\Qt\Tools\QtCreator\bin\;%PATH%
-- qtenv2.bat
 
 for:
 -
   matrix:
     only:
-      - configuration: Debug
+      - configuration: mingw53_32
   environment:
-    QBS_ENV: "debug"
+    QT_PATH: C:\Qt\5.11.2\mingw53_32
+  before_build:
+    - set PATH=%QT_PATH%\bin;C:\Qt\Tools\QtCreator\bin\;%PATH%
+    - qtenv2.bat
+    - qbs setup-toolchains --detect
+    - qbs setup-qt --detect
+    - cd C:\projects\travistest
 -
   matrix:
     only:
-      - configuration: Release
+      - configuration: msvc2017_64
   environment:
-    QBS_ENV: "release"
-  build_script:
-    - cmd: echo release build
-    - cmd: qbs setup-toolchains --detect
-    - cmd: qbs setup-qt --detect
-    - cmd: qbs config --list profiles
+    QT_PATH: C:\Qt\5.11.2\msvc2017_64
+  before_build:
+    - set PATH=%QT_PATH%\bin;C:\Qt\Tools\QtCreator\bin\;%PATH%
+    - qtenv2.bat
+    - qbs setup-toolchains --detect
+    - qbs setup-qt --detect
+    - cd C:\projects\travistest
       
 build_script:
-- cmd: ECHO %QBS_ENV%
-- cmd: qmake --version
-- cmd: qbs --version
-- cmd: qbs setup-toolchains --detect
-- cmd: qbs setup-qt --detect
-- cmd: cd C:\projects\travistest
-- cmd: dir
-- cmd: qbs build profile:qt-5-11-2
+- cmd: qbs build profile:qt-5-11-2 config:$(BUILD_BUILD_MODE)
